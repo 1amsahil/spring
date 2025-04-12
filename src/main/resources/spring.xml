@@ -7,13 +7,15 @@
 
 <!--  scope="prototype" is used for individual object created-->
 <!--  <property> is used for injecting value to (name="age") variable-->
+<!--  <constructor-arg> is used for injecting value to (parametrized constructor)-->
 
-    <bean id="programmer" class="org.eternity.Programmer" scope="prototype">
-        <property name="age" value="24"> </property>
-        <property name="lap" ref="laptop" > </property>
+    <bean id="programmer" class="org.eternity.Programmer" >
+<!--    <property name="age" value="24"> </property>    -->
+        <constructor-arg value="24" index="0" />
+
+<!--    <property name="lap" ref="laptop" > </property>     -->
+        <constructor-arg ref="laptop" index="1" />
     </bean>
 
-    <bean id="laptop" class="org.eternity.Laptop">
-
-    </bean>
+    <bean id="laptop" class="org.eternity.Laptop" />
 </beans>

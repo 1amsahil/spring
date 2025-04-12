@@ -11,9 +11,11 @@ public class Programmer {
         System.out.println("Constructor Called");
     }
 
-    Programmer(int a)
+    Programmer(int a, Laptop l)
     {
-        System.out.println(" Parametrized Constructor Called");
+        System.out.println("Parametrized Constructor Called");
+        this.age = a;
+        this.lap = l;
     }
 
 //  Age Getter-Setter
