@@ -15,6 +15,8 @@ public class App
 
         Programmer obj2 = (Programmer) context.getBean("programmer");
         obj2.code();
+
+        Computer com = context.getBean(Computer.class);
     }
 }
 

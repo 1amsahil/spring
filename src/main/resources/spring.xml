@@ -20,6 +20,9 @@
 
 <!--    primary="true" is used for give more preference to this Bean   -->
 
-    <bean id="lap" class="org.eternity.Laptop" primary="true" />
-    <bean id="com" class="org.eternity.Desktop" />         <!--It is autowired with this Bean because of Computer variable name is con in Programmer Class -->
+    <bean id="lap" class="org.eternity.Laptop" primary="true"/>
+
+<!--  lazy-init="true" is used to create the object not by default but scope="singleton" not prototype -->
+    <bean id="com" class="org.eternity.Desktop" lazy-init="true" />
+    <!--It is autowired with this Bean because of Computer variable name is con in Programmer Class -->
 </beans>
