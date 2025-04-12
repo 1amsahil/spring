@@ -8,9 +8,6 @@ import org.springframework.stereotype.Component;
 public class Programmer {
 
     private int age;
-
-
-    @Qualifier("desktop")
     Computer com;
 
     //  Constructor
@@ -42,6 +39,7 @@ public class Programmer {
     }
 
     @Autowired
+    @Qualifier("laptop")
     public void setCom(Computer com) {
         this.com = com;
     }
