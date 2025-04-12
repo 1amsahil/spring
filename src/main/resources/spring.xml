@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+<!--  scope="prototype" is used for individual object created-->
+<!--  <property> is used for injecting value to (name="age") variable-->
+
+    <bean id="programmer" class="org.eternity.Programmer" scope="prototype">
+        <property name="age" value="24"> </property>
+        <property name="lap" ref="laptop" > </property>
+    </bean>
+
+    <bean id="laptop" class="org.eternity.Laptop">
+
+    </bean>
+</beans>
