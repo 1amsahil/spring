@@ -8,14 +8,18 @@
 <!--  scope="prototype" is used for individual object created-->
 <!--  <property> is used for injecting value to (name="age") variable-->
 <!--  <constructor-arg> is used for injecting value to (parametrized constructor)-->
+<!--  autowire = "byName/byType" is used for wiring other with class -->
 
-    <bean id="programmer" class="org.eternity.Programmer" >
-<!--    <property name="age" value="24"> </property>    -->
-        <constructor-arg value="24" index="0" />
+    <bean id="programmer" class="org.eternity.Programmer" autowire="byType" >
+        <property name="age" value="24"> </property>
+<!--    <constructor-arg value="24" index="0" />-->
 
 <!--    <property name="lap" ref="laptop" > </property>     -->
-        <constructor-arg ref="laptop" index="1" />
+<!--    <constructor-arg ref="laptop" index="1" />-->
     </bean>
 
-    <bean id="laptop" class="org.eternity.Laptop" />
+<!--    primary="true" is used for give more preference to this Bean   -->
+
+    <bean id="lap" class="org.eternity.Laptop" primary="true" />
+    <bean id="com" class="org.eternity.Desktop" />         <!--It is autowired with this Bean because of Computer variable name is con in Programmer Class -->
 </beans>

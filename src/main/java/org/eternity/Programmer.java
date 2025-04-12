@@ -3,7 +3,7 @@ package org.eternity;
 public class Programmer {
 
     private int age;
-    Laptop lap;
+    Computer com;
 
 //  Constructor
     Programmer()
@@ -11,11 +11,11 @@ public class Programmer {
         System.out.println("Constructor Called");
     }
 
-    Programmer(int a, Laptop l)
+    Programmer(int a, Computer c)
     {
         System.out.println("Parametrized Constructor Called");
         this.age = a;
-        this.lap = l;
+        this.com = c;
     }
 
 //  Age Getter-Setter
@@ -24,22 +24,22 @@ public class Programmer {
     }
 
     public void setAge(int age) {
-        System.out.println("Setter Called");
+        System.out.println("Age Setter Called");
         this.age = age;
     }
 
-//  Laptop Getter-Setter
-    public Laptop getLap() {
-        return lap;
+//  Computer Getter-Setter
+    public Computer getCom() {
+        return com;
     }
 
-    public void setLap(Laptop lap) {
-        this.lap = lap;
+    public void setCom(Computer com) {
+        this.com = com;
     }
 
 //  Code
     public void code()
     {
-        lap.compile();
+        com.compile();
     }
 }

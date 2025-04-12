@@ -1,13 +1,14 @@
 package org.eternity;
 
-public class Laptop {
+public class Laptop implements Computer {
 
     Laptop()
     {
         System.out.println("Laptop Object Created");
     }
+    @Override
     public void compile()
     {
-        System.out.println("Compiling");
+        System.out.println("Compiling From Laptop");
     }
 }
