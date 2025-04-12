@@ -1,8 +1,16 @@
 package org.eternity;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Component;
+
+@Component
 public class Programmer {
 
     private int age;
+
+
+    @Qualifier("desktop")
     Computer com;
 
     //  Constructor
@@ -33,6 +41,7 @@ public class Programmer {
         return com;
     }
 
+    @Autowired
     public void setCom(Computer com) {
         this.com = com;
     }
