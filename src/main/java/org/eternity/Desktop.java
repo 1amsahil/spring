@@ -1,6 +1,6 @@
 package org.eternity;
 
-public class Desktop {
+public class Desktop implements Computer {
 
     public Desktop()
     {
